@@ -1,0 +1,31 @@
+
+> @vidyut/web@1.0.0 build /home/dijo404/git/P.E.E.R/apps/web
+> vite build
+
+vite v5.4.21 building for production...
+transforming...
+✓ 4 modules transformed.
+[plugin:vite:resolve] [plugin vite:resolve] Module "fs" has been externalized for browser compatibility, imported by "/home/dijo404/git/P.E.E.R/node_modules/.pnpm/sql.js@1.13.0/node_modules/sql.js/dist/sql-wasm.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin:vite:resolve] [plugin vite:resolve] Module "path" has been externalized for browser compatibility, imported by "/home/dijo404/git/P.E.E.R/node_modules/.pnpm/sql.js@1.13.0/node_modules/sql.js/dist/sql-wasm.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin:vite:resolve] [plugin vite:resolve] Module "crypto" has been externalized for browser compatibility, imported by "/home/dijo404/git/P.E.E.R/node_modules/.pnpm/sql.js@1.13.0/node_modules/sql.js/dist/sql-wasm.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+
+PWA v0.17.5
+mode      generateSW
+precache  9 entries (248.51 KiB)
+files generated
+  dist/sw.js
+  dist/workbox-744510e2.js
+x Build failed in 1.83s
+error during build:
+[vite-plugin-pwa:build] [plugin vite-plugin-pwa:build] src/index.css (1:0): There was an error during the build:
+  [postcss] /home/dijo404/git/P.E.E.R/apps/web/src/index.css:1:1: The `text-foreground` class does not exist. If `text-foreground` is a custom class, make sure it is defined within a `@layer` directive.
+Additionally, handling the error in the 'buildEnd' hook caused the following error:
+  [postcss] /home/dijo404/git/P.E.E.R/apps/web/src/index.css:1:1: The `text-foreground` class does not exist. If `text-foreground` is a custom class, make sure it is defined within a `@layer` directive.
+file: /home/dijo404/git/P.E.E.R/apps/web/src/index.css:1:0
+    at getRollupError (file:///home/dijo404/git/P.E.E.R/node_modules/.pnpm/rollup@4.53.3/node_modules/rollup/dist/es/shared/parseAst.js:401:41)
+    at file:///home/dijo404/git/P.E.E.R/node_modules/.pnpm/rollup@4.53.3/node_modules/rollup/dist/es/shared/node-entry.js:23347:39
+    at async catchUnfinishedHookActions (file:///home/dijo404/git/P.E.E.R/node_modules/.pnpm/rollup@4.53.3/node_modules/rollup/dist/es/shared/node-entry.js:22805:16)
+    at async rollupInternal (file:///home/dijo404/git/P.E.E.R/node_modules/.pnpm/rollup@4.53.3/node_modules/rollup/dist/es/shared/node-entry.js:23330:5)
+    at async build (file:///home/dijo404/git/P.E.E.R/node_modules/.pnpm/vite@5.4.21_@types+node@20.19.25_lightningcss@1.30.2_terser@5.44.1/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:65709:14)
+    at async CAC.<anonymous> (file:///home/dijo404/git/P.E.E.R/node_modules/.pnpm/vite@5.4.21_@types+node@20.19.25_lightningcss@1.30.2_terser@5.44.1/node_modules/vite/dist/node/cli.js:829:5)
+ ELIFECYCLE  Command failed with exit code 1.

@@ -1,0 +1,107 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String
+  password  String
+  role      Role     @default(TEACHER)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  assignments Assignment[]
+}
+
+model Student {
+  id          String   @id @default(cuid())
+  name        String
+  email       String?  @unique
+  rollNumber  String   @unique
+  class       String
+  section     String?
+  dateOfBirth DateTime?
+  phone       String?
+  parentPhone String?
+  address     String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  performances Performance[]
+  submissions  Submission[]
+}
+
+model Performance {
+  id         String   @id @default(cuid())
+  studentId  String
+  subject    String
+  score      Float
+  maxScore   Float
+  testType   String   // "quiz", "exam", "assignment"
+  testDate   DateTime
+  attendance Float?   // percentage
+  remarks    String?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  student Student @relation(fields: [studentId], references: [id], onDelete: Cascade)
+
+  @@index([studentId])
+  @@index([subject])
+}
+
+model Assignment {
+  id          String   @id @default(cuid())
+  title       String
+  description String
+  subject     String
+  class       String
+  section     String?
+  dueDate     DateTime
+  maxScore    Float    @default(100)
+  createdById String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  createdBy   User         @relation(fields: [createdById], references: [id])
+  submissions Submission[]
+
+  @@index([class])
+  @@index([subject])
+  @@index([dueDate])
+}
+
+model Submission {
+  id           String    @id @default(cuid())
+  assignmentId String
+  studentId    String
+  content      String?
+  fileUrl      String?
+  submittedAt  DateTime  @default(now())
+  score        Float?
+  feedback     String?
+  gradedAt     DateTime?
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+
+  assignment Assignment @relation(fields: [assignmentId], references: [id], onDelete: Cascade)
+  student    Student    @relation(fields: [studentId], references: [id], onDelete: Cascade)
+
+  @@unique([assignmentId, studentId])
+  @@index([assignmentId])
+  @@index([studentId])
+}
+
+enum Role {
+  ADMIN
+  TEACHER
+}

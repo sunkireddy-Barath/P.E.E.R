@@ -1,0 +1,38 @@
+{
+    "name": "@vidyut/web",
+    "version": "1.0.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview",
+        "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
+    },
+    "dependencies": {
+        "@vidyut/ai": "workspace:*",
+        "@vidyut/db": "workspace:*",
+        "@vidyut/gamification": "workspace:*",
+        "@vidyut/rag": "workspace:*",
+        "@vidyut/shared": "workspace:*",
+        "@vidyut/sync": "workspace:*",
+        "clsx": "^2.1.1",
+        "lucide-react": "^0.309.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-router-dom": "^6.20.0",
+        "recharts": "^2.10.3",
+        "tailwind-merge": "^2.6.0"
+    },
+    "devDependencies": {
+        "@types/react": "^18.2.43",
+        "@types/react-dom": "^18.2.17",
+        "@vitejs/plugin-react": "^4.2.1",
+        "autoprefixer": "^10.4.22",
+        "postcss": "^8.5.6",
+        "tailwindcss": "^3.4.18",
+        "typescript": "^5.3.3",
+        "vite": "^5.0.8",
+        "vite-plugin-pwa": "^0.17.4"
+    }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "peer",
+  "version": "1.0.0",
+  "description": "Offline-first AI learning platform for rural schools in India",
+  "private": true,
+  "scripts": {
+    "build": "pnpm -r build",
+    "dev:web": "pnpm --filter @vidyut/web dev",
+    "dev:mobile": "pnpm --filter @vidyut/mobile start",
+    "build:web": "pnpm --filter @vidyut/web build",
+    "build:mobile": "pnpm --filter @vidyut/mobile build",
+    "test": "pnpm -r test",
+    "lint": "pnpm -r lint",
+    "seed-db": "tsx scripts/seed-db.ts",
+    "process-textbooks": "tsx scripts/process-textbooks.ts",
+    "clean": "pnpm -r clean && rm -rf node_modules"
+  },
+  "keywords": [
+    "education",
+    "offline-first",
+    "ai",
+    "pwa",
+    "react-native"
+  ],
+  "author": "P.E.E.R Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3",
+    "prettier": "^3.1.0",
+    "eslint": "^8.55.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  }
+}

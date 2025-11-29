@@ -1,0 +1,59 @@
+Chapter 1: Knowing Our Numbers
+
+Numbers are everywhere around us. We use numbers to count things, measure distances, tell time, and much more. In this chapter, we will learn about different types of numbers and how to work with them.
+
+1.1 Comparing Numbers
+
+When we have two numbers, we can compare them to find out which one is larger or smaller. For example:
+- 45 is greater than 32
+- 128 is less than 256
+- 500 is equal to 500
+
+We use symbols to show comparison:
+- > means "greater than"
+- < means "less than"  
+- = means "equal to"
+
+Example: 75 > 50 (75 is greater than 50)
+
+1.2 Large Numbers
+
+As we count higher, numbers become very large. We use place value to understand large numbers:
+- Ones place
+- Tens place
+- Hundreds place
+- Thousands place
+- Ten thousands place
+- Lakhs place
+
+Example: In the number 45,678:
+- 8 is in the ones place
+- 7 is in the tens place
+- 6 is in the hundreds place
+- 5 is in the thousands place
+- 4 is in the ten thousands place
+
+1.3 Estimation
+
+Sometimes we don't need the exact number. We can estimate or round numbers to make calculations easier.
+
+Example: If a book costs ₹48, we can estimate it as ₹50.
+
+Practice Problems:
+
+1. Compare these numbers using >, <, or =:
+   a) 234 ___ 432
+   b) 567 ___ 567
+   c) 890 ___ 789
+
+2. Write the place value of 7 in these numbers:
+   a) 4,752
+   b) 27,345
+   c) 70,123
+
+3. Estimate these numbers to the nearest ten:
+   a) 47
+   b) 83
+   c) 125
+
+Remember: Practice makes perfect! Try solving these problems on your own.

@@ -1,0 +1,29 @@
+
+> @vidyut/web@1.0.0 build /home/dijo404/git/P.E.E.R/apps/web
+> vite build
+
+vite v5.4.21 building for production...
+transforming...
+[plugin:vite:resolve] [plugin vite:resolve] Module "fs" has been externalized for browser compatibility, imported by "/home/dijo404/git/P.E.E.R/node_modules/.pnpm/sql.js@1.13.0/node_modules/sql.js/dist/sql-wasm.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin:vite:resolve] [plugin vite:resolve] Module "path" has been externalized for browser compatibility, imported by "/home/dijo404/git/P.E.E.R/node_modules/.pnpm/sql.js@1.13.0/node_modules/sql.js/dist/sql-wasm.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin:vite:resolve] [plugin vite:resolve] Module "crypto" has been externalized for browser compatibility, imported by "/home/dijo404/git/P.E.E.R/node_modules/.pnpm/sql.js@1.13.0/node_modules/sql.js/dist/sql-wasm.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+✓ 1446 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/registerSW.js                      0.13 kB
+dist/manifest.webmanifest               0.51 kB
+dist/index.html                         1.11 kB │ gzip:  0.51 kB
+dist/assets/index-D2u56Qyo.css         21.17 kB │ gzip:  4.25 kB
+dist/assets/db-vendor-Bbkk8_0u.js       3.77 kB │ gzip:  1.56 kB
+dist/assets/ai-vendor-BIe-aUns.js       6.82 kB │ gzip:  2.22 kB
+dist/assets/sql-wasm-C4NFpN6Q.js       44.07 kB │ gzip: 15.60 kB
+dist/assets/index-Bt_Sz_yW.js          44.67 kB │ gzip: 13.52 kB
+dist/assets/react-vendor-Cxiu5o9j.js  162.92 kB │ gzip: 53.11 kB
+✓ built in 1.39s
+
+PWA v0.17.5
+mode      generateSW
+precache  9 entries (278.02 KiB)
+files generated
+  dist/sw.js
+  dist/workbox-744510e2.js

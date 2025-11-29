@@ -1,0 +1,56 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:15-alpine
+    container_name: vidyut-admin-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: vidyut
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: vidyut_admin
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - vidyut-network
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U vidyut" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Admin Portal Application
+  admin-portal:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: vidyut-admin-portal
+    restart: unless-stopped
+    environment:
+      DATABASE_URL: postgresql://vidyut:vidyut_password@postgres:5432/vidyut_admin?schema=public
+      NEXTAUTH_SECRET: ${NEXTAUTH_SECRET:-change-this-secret-in-production}
+      NEXTAUTH_URL: ${NEXTAUTH_URL:-http://localhost:3000}
+      NODE_ENV: production
+    ports:
+      - "3000:3000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - vidyut-network
+    command: >
+      sh -c "
+        npx prisma migrate deploy &&
+        node server.js
+      "
+
+volumes:
+  postgres_data:
+    driver: local
+
+networks:
+  vidyut-network:
+    driver: bridge
