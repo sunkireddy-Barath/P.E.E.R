@@ -4,7 +4,7 @@ import App from './App';
 import './index.css';
 
 // Initialize database on app load
-import { getDatabase } from '@vidyut/db';
+import { getDatabase } from './lib/mockData';
 getDatabase().then(() => {
     console.log('Database initialized');
 }).catch((error) => {

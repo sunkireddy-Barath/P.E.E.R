@@ -10,13 +10,9 @@
         "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
     },
     "dependencies": {
-        "@vidyut/ai": "workspace:*",
-        "@vidyut/db": "workspace:*",
-        "@vidyut/gamification": "workspace:*",
-        "@vidyut/rag": "workspace:*",
-        "@vidyut/shared": "workspace:*",
-        "@vidyut/sync": "workspace:*",
         "clsx": "^2.1.1",
+        "date-fns": "^4.1.0",
+        "firebase": "^12.8.0",
         "lucide-react": "^0.309.0",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",

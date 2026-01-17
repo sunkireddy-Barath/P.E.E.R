@@ -1,5 +1,5 @@
 import { BookOpen, Clock, Award, TrendingUp } from 'lucide-react';
-import { defaultMockData } from '@vidyut/shared';
+import { defaultMockData } from '../lib/mockData';
 import { formatDistanceToNow } from 'date-fns';
 
 const Dashboard = () => {

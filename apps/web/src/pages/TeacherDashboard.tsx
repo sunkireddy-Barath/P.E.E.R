@@ -1,5 +1,5 @@
 import { Users, UserCheck, TrendingUp, Award, AlertCircle, Trophy } from 'lucide-react';
-import { MOCK_CLASS_ANALYTICS } from '@vidyut/shared';
+import { MOCK_CLASS_ANALYTICS } from '../lib/mockData';
 
 export default function TeacherDashboard() {
     const { grade, section, totalStudents, activeStudents, avgMastery, topPerformers, needsAttention } = MOCK_CLASS_ANALYTICS;

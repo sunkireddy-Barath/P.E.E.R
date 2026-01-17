@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { MOCK_TUTORS, MOCK_CHAT_HISTORY } from '@vidyut/shared';
+import { MOCK_TUTORS, MOCK_CHAT_HISTORY } from '../lib/mockData';
 
 export default function Chat() {
     const [conversations] = useState(

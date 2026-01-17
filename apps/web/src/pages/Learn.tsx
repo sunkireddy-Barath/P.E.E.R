@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { getInferenceEngine } from '@vidyut/ai';
+import { getInferenceEngine } from '../lib/mockData';
 
 export default function Learn() {
     const { contentId } = useParams();

@@ -69,13 +69,11 @@ export default defineConfig({
             output: {
                 manualChunks: {
                     'react-vendor': ['react', 'react-dom', 'react-router-dom'],
-                    'ai-vendor': ['@vidyut/ai'],
-                    'db-vendor': ['@vidyut/db', '@vidyut/sync'],
                 },
             },
         },
     },
     optimizeDeps: {
-        exclude: ['@vidyut/ai', '@vidyut/db'],
+        include: ['react', 'react-dom', 'react-router-dom', 'lucide-react', 'firebase'],
     },
 });

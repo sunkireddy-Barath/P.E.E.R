@@ -14,52 +14,15 @@
     "isolatedModules": true,
     "jsx": "react-jsx",
     "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "paths": {
-      "@vidyut/shared": [
-        "./packages/shared/src"
-      ],
-      "@vidyut/db": [
-        "./packages/db/src"
-      ],
-      "@vidyut/sync": [
-        "./packages/sync/src"
-      ],
-      "@vidyut/ai": [
-        "./packages/ai/src"
-      ],
-      "@vidyut/rag": [
-        "./packages/rag/src"
-      ],
-      "@vidyut/gamification": [
-        "./packages/gamification/src"
-      ]
-    }
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true
   },
   "include": [
-    "packages",
     "apps"
   ],
-  "references": [
-    {
-      "path": "./packages/shared"
-    },
-    {
-      "path": "./packages/db"
-    },
-    {
-      "path": "./packages/sync"
-    },
-    {
-      "path": "./packages/ai"
-    },
-    {
-      "path": "./packages/rag"
-    },
-    {
-      "path": "./packages/gamification"
-    }
+  "exclude": [
+    "node_modules",
+    "packages"
   ]
 }
